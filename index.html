@@ -54,7 +54,6 @@
                         }
                     greetMe("World");
                 </code>
-                <button type="button" onclick="runCode()">Run Code</button>
                 <p>
                 Select the code in the pad and hit Ctrl+R to watch it unfold in your browser!
                 </p>
@@ -81,16 +80,24 @@
             <article>
                 You can declare a variable in three ways:
                 <p>
-                  With the keyword var. For example, <code>var x = 42.</code> This syntax can be used to declare both local and global variables.
+                  With the keyword var. For example, 
+                    <code>
+                      var x = 42.
+                    </code>
+                   This syntax can be used to declare both local and global variables.
                 </p>
                 <p>
                     By simply assigning it a value. For example, 
-                    <code>x = 42.</code> 
+                    <code>
+                        x = 42.
+                    </code> 
                     This always declares a global variable. It generates a strict JavaScript warning. You shouldn't use this variant.
                 </p>
                 <p>
                     With the keyword let. For example,
-                    <code> let y = 13.</code> 
+                    <code> 
+                        let y = 13.
+                    </code> 
                     This syntax can be used to declare a block scope local variable. See Variable scope below.
                 </p>
             </article>
@@ -105,7 +112,8 @@
                     if (true) {
                         var x = 5;
                         }
-                    console.log(x);  // 5</code>
+                    console.log(x);  // 5
+                </code>
                 <p>This behavior changes, when using the let declaration introduced in ECMAScript 2015.</p>
             
                 <code>
@@ -113,7 +121,8 @@
                         let y = 5;
                         }
                     console.log(y);  
-                    // ReferenceError: y is not defined</code>
+                    // ReferenceError: y is not defined
+                </code>
             </article>
         </section>
         <section class="main-section" id="Global_variables">
@@ -129,18 +138,21 @@
             <article>
                 <p>You can create a read-only, named constant with the const keyword. The syntax of a constant identifier is the same as for a variable identifier: it must start with a letter, underscore or dollar sign and can contain alphabetic, numeric, or underscore characters.</p>
                 
-                <code>const PI = 3.14;</code>
+                <code>
+                    const PI = 3.14;
+                </code>
                 <p>A constant cannot change value through assignment or be re-declared while the script is running. It has to be initialized to a value.</p>
                 
                 <p>The scope rules for constants are the same as those for let block scope variables. If the const keyword is omitted, the identifier is assumed to represent a variable.</p>
                 
                 <p>You cannot declare a constant with the same name as a function or variable in the same scope. For example:</p>
                 
-                <code>// THIS WILL CAUSE AN ERROR
+                <code>
+                    // THIS WILL CAUSE AN ERROR
                     function f() {};
-                        const f = 5;
-                        // THIS WILL CAUSE AN ERROR ALSO
-                        function f() {
+                    const f = 5;
+                    // THIS WILL CAUSE AN ERROR ALSO
+                    function f() {
                         const g = 5;
                         var g;
                         //statements
@@ -215,14 +227,18 @@
                     }
                 </code>
                 It is advisable to not use simple assignments in a conditional expression, because the assignment can be confused with equality when glancing over the code. For example, do not use the following code:
-                <code>if (x = y) {
-                /* statements here */
-                }</code>
+                <code>
+                    if (x = y) {
+                        /* statements here */
+                    }
+                </code>
                 If you need to use an assignment in a conditional expression, a common practice is to put additional parentheses around the assignment. For example:
             
-                <code>if ((x = y)) {
-                /* statements here */
-                }</code>
+                <code>
+                    if ((x = y)) {
+                        /* statements here */
+                    }
+                </code>
             </article>
         </section>
         <section class="main-section" id="while_statement">
@@ -230,8 +246,9 @@
             <article>
                 A while statement executes its statements as long as a specified condition evaluates to true. A while statement looks as follows:
             
-                <code>while (condition)
-                statement
+                <code>
+                    while (condition)    
+                        statement
                 </code>
                 If the condition becomes false, statement within the loop stops executing and control passes to the statement following the loop.
             
@@ -269,12 +286,16 @@
                 <li>The JavaScript statements that define the function, enclosed in curly brackets, { }.</li>
                 <p>For example, the following code defines a simple function named square:</P>
             
-                <code>function square(number) {
-                return number * number;
-                }</code>
+                <code>
+                    function square(number) {
+                        return number * number;
+                    }
+                </code>
                 <p>The function square takes one argument, called number. The function consists of one statement that says to return the argument of the function (that is, number) multiplied by itself. The return statement specifies the value returned by the function.
                 </p>
-                <code>return number * number;</code>
+                <code>
+                    return number * number;
+                </code>
                 <p>Primitive parameters (such as a number) are passed to functions by value; the value is passed to the function, but if the function changes the value of the parameter, this change is not reflected globally or in the calling function.</p>
             </article>
         </section>
