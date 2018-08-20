@@ -8,13 +8,28 @@ html,body{
     color: white;
 }
 
+.menu { 
+    font-size: 48px; 
+    color: #F7658F;
+}
+
+.close {    
+    color: black;
+}
+
+.material-icons:hover { 
+    cursor: pointer;
+    outline-style: solid;
+}
+
 header{
     font: bold 32px Arial, Helvetica, sans-serif;
     text-transform: uppercase;
 }
 
 section{
-    /* border: 2px solid black; */
+    position: relative;
+    border: 2px solid black;
     padding: 20px;
     background-color: #0FACF3;
     border-radius: 8px;
@@ -23,14 +38,20 @@ section{
 
 section header{
     text-align: center;
+    color: black;
     margin-bottom: 30px;
     text-decoration: underline;
     text-decoration-color: #F7658F;
     text-decoration-style: wavy;
 }
 
+section article p,li{
+    padding: 0 20px;
+}
+
 section code{
     display: block;
+    color: black;
     line-height: 2;
     text-align: left;
     word-wrap: normal;
@@ -40,4 +61,58 @@ section code{
     margin: 10px;
     padding: 0 10px;
     border-radius: 5px;
+}
+
+@media (max-width:600px){
+    section code{
+        white-space: pre-line;
+        word-wrap: break-word;
+    }
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+nav h1{
+    margin: 0;
+}
+
+#navbar{
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    width: 300px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #653A8F;
+}
+
+#navbar div{
+    display: flex;
+    align-items: flex-start;
+}
+
+#navbar div header{
+    text-align: center;
+}
+
+#navbar ul{
+    list-style: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-behavior: auto;
+}
+
+#navbar ul li{
+    border-bottom:2px solid black;
+}
+
+#navbar ul a{
+    text-decoration: none; 
+    padding: 2px 10px;
+    font: normal 18px Helvetica;
+    color: white;
 }
