@@ -8,6 +8,10 @@ html,body{
     color: white;
 }
 
+#main-doc {
+    margin-top: 40px;
+}
+
 .menu { 
     font-size: 48px; 
     color: #F7658F;
@@ -115,4 +119,19 @@ nav h1{
     padding: 2px 10px;
     font: normal 18px Helvetica;
     color: white;
+}
+
+.mainChange {
+    width: 75%;
+    margin-left: 25%;
+}
+
+#main-nav {
+    position: fixed;
+    display: block;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: black;
 }
